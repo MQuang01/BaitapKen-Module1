@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style-formbasicp2.css">
+    <title>Form Basic</title>
+</head>
+<body>
+    <form method="get" action="formbasicp2.html" >
+        <table>
+            <th colspan="2" class="highlight">ĐĂNG KÝ HỌC VIÊN</th>
+            <tr>
+                <td>Họ và tên </td>
+                <td>
+                    <input type="text" name="uname" placeholder="Ho va ten">
+                </td>
+            </tr>
+            <tr>
+                <td>Ngày sinh </td>
+                <td>
+                    <input type="datetime" name="birthday">
+                </td>
+            </tr>
+            <tr>
+                <td>Giới tính </td>
+                <td>
+                    <input type="radio" id="nam" name="gioitinh" value="NAM">
+                    <label for="nam" style="color: black;">Nam</label>
+                    <input type="radio" id="nu" name="gioitinh" value="NU">
+                    <label for="nu" style="color: black;">Nữ</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Địa chỉ </td>
+                <td>
+                    <textarea type="text" name="diachi"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>Lớp</td>
+                <td>
+                    <select >-Chọn lớp-
+                        <option value="">-Chọn lớp-</option>
+                        <option value="lopA">Lớp A</option>
+                        <option value="lopB">lớp B</option>
+                        <option value="lopC">Lớp C</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>
+                    <input type="email" name="mail" placeholder="example@exp.com">
+                </td>
+            </tr>
+            <tr>
+                <td>Điện thoại</td>
+                <td>
+                    <input type="text" name="tel">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" name="dangky" value="Đăng ký">
+                    <input type="submit" name="again" value="Nhập Lại">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
