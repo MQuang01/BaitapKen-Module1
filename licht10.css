@@ -1,0 +1,65 @@
+body {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 100px;
+}
+
+form {
+    font-family: cursive;
+    text-align: center;
+    width: 400px;
+    height: auto;
+    margin: auto;
+}
+
+.month {
+    color: blue;
+}
+
+.dayViet {
+    color: white;
+    background-color: #FFC107;
+}
+
+.dayViet td:first-child{
+    background-color: red;
+}
+
+.dayViet td:last-child{
+    background-color: blue;
+}
+
+.dayEng td:first-child {
+    color: red;
+}
+
+.dayEng td:last-child{
+    color: blue;
+}
+
+table {
+    width: 100%;
+    height: auto;
+}
+
+.main2 {
+    border-collapse: collapse;
+}
+
+.day td{
+    border: 3px inset rgb(222,222,222);
+}
+
+.day td:first-child{
+    color: red;
+}
+
+sub{
+    color: black;
+}
+
+.day td:last-child {
+    color: blue;
+}
