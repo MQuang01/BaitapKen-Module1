@@ -1,0 +1,54 @@
+body {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    margin-left: 80px;
+    margin-right: 80px;
+    padding: 80px;
+}
+
+form {
+    width: 600px;
+    height: auto;
+    padding: 20px;
+    margin: auto;
+}
+
+table {
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.title {
+    color: blue;
+}
+
+.title tr td:last-child{
+    text-align: end;
+}
+
+.menu {
+    border-collapse: collapse;
+}
+
+.menu th{
+    text-align: center;
+    border: 1px solid black;
+}
+
+.menu td {
+    text-align: center;
+    border: 1px solid black;
+}
+
+.day td{
+    background-color: yellow;
+}
+
+.week {
+    background-color: #FF9800;
+}
+
+.child {
+    background-color: rgb(222, 222, 222);
+}
