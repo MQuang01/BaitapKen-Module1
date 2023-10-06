@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+}
+
+
+header {
+    padding-left: 1%;
+    padding-bottom: 20px;
+    border-bottom: 1px dotted gray;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+ul{
+    list-style: none;
+    padding-left: 0px;
+}
+
+.container {
+    margin-left: 1%;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+label.desc {
+    display: block;
+    padding-bottom: 5px;
+}
+
+.desc {
+    font-weight: bold;
+}
+
+select {
+    width: 50%;
+}
+
+.check-gender>div {
+    padding-bottom: 3px;
+}
+
+#othertext {
+    position: relative;
+}
+
+.feild-3 #othertext::target-text {
+    display: block;
+}
+
+#note {
+    display: none;
+    position:absolute;
+}
