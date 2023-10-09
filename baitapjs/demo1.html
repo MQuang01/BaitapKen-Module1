@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div style="display: flex;">
+        <button type="button" onclick="showMessage()">Cách 1</button>
+    
+        <div>
+            <div id="messageDiv" style="text-align: center;"></div>
+            <button type="button" onclick="showMessage2()">Cách 2</button>
+        </div>
+
+        <button type="button" onclick="showMessage3()">Cách 3</button>
+
+        <button type="button" onclick="showMessage4()">Cách 4</button>
+    </div>
+    
+    <script>
+        function showMessage(){
+            alert('Xin chào')
+        }
+
+        function showMessage2(){
+            document.getElementById('messageDiv').innerHTML='Cách 2'
+        }
+
+        function showMessage3(){
+            document.write('Xin chào')
+        }
+
+        function showMessage4() {
+            console.log('Xin chào')
+        }
+    </script>
+    
+</body>
+</html>
