@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css menu/app.css">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Menu Content</title>
+</head>
+<body>
+    <div class="form-menu">
+        <div class="form-left">
+            <form action="">
+                <header>
+                    <div class="manage">
+                        <div class="task-btn">                            
+                            <button class="btn-head" type="button"><i class="fa-solid fa-table-cells-large"></i>Phòng bàn</button>                            
+                            <button class="btn-head" type="button"><i class="fa-solid fa-utensils"></i>Thực đơn</button>                            
+                        </div>
+                        <div class="task-search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" id="search" placeholder="Tìm món (F3)">
+                        </div>
+                        <div class="emote">
+                            <div class="tick">
+                                <button type="button">
+                                    <i class="fa-solid fa-bolt"></i>
+                                </button>
+                            </div>
+                            <div class="add">
+                                <button type="button">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>                        
+                    </div>        
+                </header>
+                <div class="list">
+                    <div class="btn-list">
+                        <button type="">Tất cả</button>
+                        <button type="">BIA & THUỐC LÁ</button>
+                        <button type="">CLASSIC COCKTAILS</button>
+                        <button type="">MÓN KHAI VỊ</button>
+                        <button type="">SÚP</button>
+                        <button type="">TEA</button>
+                    </div>
+                    <div class="list-menu">
+                        <div class="mon1">      
+                            <div id="ill">
+                                <img src="/images/lemon tea.jpg" alt="lemontea">
+                                <button class="price-order">15,000</button>
+                            </div>
+                            <p>Lemon Tea</p>
+                        </div>
+                        <div class="mon2">      
+                            <div id="ill">
+                                <img src="/images/tradao.jpg" alt="peachtea">
+                                <button class="price-order">15,000</button>
+                            </div>
+                            <p>Peach Tea</p>
+                        </div>
+                        <div class="mon3">      
+                            <div id="ill">
+                                <img src="/images/mint tea.jpg" alt="minttea">
+                                <button class="price-order">15,000</button>
+                            </div>
+                            <p>Mint Tea</p>
+                        </div>
+                        <div class="mon4">      
+                            <div id="ill">
+                                <img src="/images/lipton.jpg" alt="liptonmilk">
+                                <button class="price-order">15,000</button>
+                            </div>
+                            <p>Lipton with milk</p>
+                        </div>
+                        <div class="mon5">      
+                            <div id="ill">
+                                <img src="/images/lemonjuice.jpg" alt="lemonjuice">
+                                <button class="price-order">15,000</button>
+                            </div>
+                            <p>Lemon Juice</p>
+                        </div>
+                        
+                    </div>
+                </div>                
+            </form>
+        </div>
+        <div class="form-right">
+            <form action="">
+                <header>
+                    <div class="manage">
+                        <div class="table-order">
+                            <button class="table-bill" type="button">4-39</button>
+                            <button class="table-bill" type="button">4-38</button>
+                            <div class="add">
+                                <button type="button" >
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>                            
+                        </div>
+                        <div class="emote-left">
+                            <div class="sound">
+                                <button type="button">
+                                    <i class="fa-solid fa-volume-xmark"></i>
+                                </button>
+                            </div>
+                            <div class="bell">
+                                <button type="button">
+                                    <i class="fa-solid fa-bell"></i>
+                                </button>
+                            </div>
+                            <div class="repeat">
+                                <button type="button">
+                                    <i class="fa-solid fa-rotate"></i>
+                                </button>
+                            </div>
+                            <div class="print">
+                                <button type="button">
+                                    <i class="fa-solid fa-print"></i>
+                                </button>
+                            </div>
+                            <div class="account">
+                                <label for="i-bars" style="cursor: pointer;">123456...</label>
+                            </div>
+                            <div class="bars">
+                                <button id="i-bars"type="button" >
+                                    <i class="fa-solid fa-bars"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>        
+                </header>
+                <div class="list">
+                    <div class="top-list-bill">
+                        <div class="btn-list-table">
+                            <button type=""><i class="fa-solid fa-table-cells-large"></i>Bàn 1/ Lầu 2</button>
+                        </div>
+                        <div class="search-cus">
+                            <div class="task-search">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <input type="text" id="search" placeholder="Tìm khách hàng (F4)">
+                            </div>
+                            <div class="add-bill">
+                                <button type="button">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="select-price">
+                            <i class="fa-solid fa-tag"></i>
+                            <select name="price-bill" id="">
+                                <option value="">Bảng giá chung</option>
+                                <option value="15,000">15,000</option>
+                                <option value="25,000">25,000</option>
+                                <option value="35,000">35,000</option>
+                            </select>
+                        </div>
+                        <div class="cart">
+                            <button type="button">
+                                <i class="fa-solid fa-basket-shopping"></i>
+                            </button>
+                        </div>
+                        <div class="more">
+                            <button type="button">
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bill">
+                        <div class="product-order">
+                            <div class="list-bill">
+                                <div class="delete">
+                                    <button type="button"><i class="fa-solid fa-trash-can"></i></button>
+                                </div>
+                                <div class="name-product">
+                                    <p><h3>1. Lipton with milk</h3></p>
+                                </div>
+                                <div class="quantity">
+                                    <div>
+                                        <button type="button">
+                                            <i class="fa-solid fa-minus"></i>
+                                        </button>
+                                    </div>  
+                                    <div>
+                                        <p>1</p>
+                                    </div>
+                                    <div>
+                                        <button type="button">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="price-product">
+                                    <p>15,000</p>
+                                </div>  
+                                <div class="sum">
+                                    <p>15,000</p>
+                                </div>
+                                <div class="note">
+                                    <button>
+                                        <i class="fa-regular fa-star"></i>
+                                    </button>
+                                    <div class="details">
+                                        <i class="fa-regular fa-file"></i>
+                                        <input type="text" placeholder="Nhập ghi chú/ Món thêm"> 
+                                    </div>                                
+                                        
+                                </div>
+                            </div>
+                            <div class="list-bill">
+                                <div class="delete">
+                                    <button type="button"><i class="fa-solid fa-trash-can"></i></button>
+                                </div>
+                                <div class="name-product">
+                                    <p><h3>2. Lemon Juice</h3></p>
+                                </div>
+                                <div class="quantity">
+                                    <div>
+                                        <button type="button">
+                                            <i class="fa-solid fa-minus"></i>
+                                        </button>
+                                    </div>  
+                                    <div>
+                                        <p>1</p>
+                                    </div>
+                                    <div>
+                                        <button type="button">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="price-product">
+                                    <p>15,000</p>
+                                </div>  
+                                <div class="sum">
+                                    <p>15,000</p>
+                                </div>
+                                <div class="note">
+                                    <button>
+                                        <i class="fa-regular fa-star"></i>
+                                    </button>
+                                    <div class="details">
+                                        <i class="fa-regular fa-file"></i>
+                                        <input type="text" placeholder="Nhập ghi chú/ Món thêm"> 
+                                    </div>                                
+                                        
+                                </div>
+                            </div>
+                            <div class="list-bill">
+                                <div class="delete">
+                                    <button type="button"><i class="fa-solid fa-trash-can"></i></button>
+                                </div>
+                                <div class="name-product">
+                                    <p><h3>3. Mint Tea</h3></p>
+                                </div>
+                                <div class="quantity">
+                                    <div>
+                                        <button type="button">
+                                            <i class="fa-solid fa-minus"></i>
+                                        </button>
+                                    </div>  
+                                    <div>
+                                        <p>1</p>
+                                    </div>
+                                    <div>
+                                        <button type="button">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="price-product">
+                                    <p>15,000</p>
+                                </div>  
+                                <div class="sum">
+                                    <p>15,000</p>
+                                </div>
+                                <div class="note">
+                                    <button>
+                                        <i class="fa-regular fa-star"></i>
+                                    </button>
+                                    <div class="details">
+                                        <i class="fa-regular fa-file"></i>
+                                        <input type="text" placeholder="Nhập ghi chú/ Món thêm"> 
+                                    </div>                                
+                                        
+                                </div>
+                            </div>
+                            
+                            
+                                                                             
+                        </div>
+                    </div>
+                    <div class="pay">
+                        <h3>thanh toán</h3>
+                    </div>          
+                </div>                     
+            </form>
+        </div>        
+    </div>    
+    <footer>
+        <div class="form-footer">
+            <ul>
+                <li>Hỗ trợ</li>
+                <li>Chi nhánh</li>
+                <li>Phím tắt</li>
+                <li>Phiên bản</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
