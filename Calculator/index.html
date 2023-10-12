@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="container">
+        <input type="text" placeholder="0">
+        <div class="grid-keyboard">
+            <button type="button" >Rad</button>
+            <button type="button"  class="num"><i class="fa-regular fa-keyboard" style="font-size: 18px; opacity: 0.2;"></i></button>
+            <button type="button" >x!</button>
+            <button type="button" >&#40;</button>
+            <button type="button" >&#41;</button>
+            <button type="button" >&#37;</button>
+            <button type="button" onclick="handleBtnClick('AC')">AC</button>
+            <button type="button" >Inv</button>
+            <button type="button" >sin</button>
+            <button type="button" >In</button>
+            <button type="button" class="num" onclick="handleBtnClick(7)">7</button>
+            <button type="button" class="num" onclick="handleBtnClick(8)">8</button>
+            <button type="button" class="num" onclick="handleBtnClick(9)">9</button>
+            <button type="button" onclick="handleBtnClick('/')">&#47;</button>
+            <button type="button" >n</button>
+            <button type="button" >cos</button>
+            <button type="button" >log</button>
+            <button type="button" class="num" onclick="handleBtnClick(4)">4</button>
+            <button type="button" class="num" onclick="handleBtnClick(5)">5</button>
+            <button type="button" class="num" onclick="handleBtnClick(6)">6</button>
+            <button type="button" onclick="handleBtnClick('*')">*</button>
+            <button type="button" >e</button>
+            <button type="button" >tan</button>
+            <button type="button" >&#8730;</button>
+            <button type="button" class="num" onclick="handleBtnClick(1)">1</button>
+            <button type="button" class="num" onclick="handleBtnClick(2)">2</button>
+            <button type="button" class="num" onclick="handleBtnClick(3)">3</button>
+            <button type="button" onclick="handleBtnClick('-')">&#8722;</button>
+            <button type="button" >Ans</button>
+            <button type="button" >EXP</button>
+            <button type="button" onclick="handleBtnClick('DEL')">DEL</button>
+            <button type="button" class="num" onclick="handleBtnClick(0)">0</button>
+            <button type="button" class="num" >&#46;</button>
+            <button type="button" class="num" onclick="handleBtnClick('&#61;')">&#61;</button>
+            <button type="button" onclick="handleBtnClick('+')">&#43;</button>
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
