@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <img id="nobita" src="Nobita.png" alt="Chu be dan Nobita">
+
+    <script>
+
+
+
+        function upArrowPressed() {
+
+            let element = document.getElementById("nobita");
+
+            if (element.style.top == '0px') {
+                alert("Can't move to top !")
+            } else {
+                element.style.top = parseInt(element.style.top) - 10 + 'px';
+            }
+        }
+
+        function downArrowPressed() {
+            {
+                let element = document.getElementById("nobita");
+                element.style.top = parseInt(element.style.top) + 10 + 'px';
+            }
+        }
+
+        function rightArrowPressed() {
+            {
+                let element = document.getElementById("nobita");
+                element.style.left = parseInt(element.style.left) + 10 + 'px';
+            }
+        }
+
+        function leftArrowPressed() {
+
+            let element = document.getElementById("nobita");
+
+            if (element.style.left == '0px') {
+                alert("Can't move to left !")
+            } else {
+                element.style.left = parseInt(element.style.left) - 10 + 'px';
+            }
+
+        }
+
+        function moveSelection(evt) {
+            switch (evt.keyCode) {
+                case 37:
+                    leftArrowPressed();
+                    break;
+                case 38:
+                    upArrowPressed();
+                    break;
+                case 39:
+                    rightArrowPressed();
+                    break;
+
+                case 40:
+                    downArrowPressed();
+                    break;
+
+            }
+        }
+
+
+        function doReady() {
+            let element = document.getElementById("nobita");
+            element.style.position = 'absolute';
+            element.style.top = '0';
+            element.style.left = '0';
+            window.addEventListener('keydown', moveSelection)
+
+        }
+
+        document.addEventListener('DOMContentLoaded', doReady);
+
+    </script>
+</body>
+
+</html>
