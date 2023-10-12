@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            gap: 50px;
+        }
+
+        body div {
+            height: auto;
+        }
+
+        button {
+            height: 20px;
+            position: absolute;
+            top: 67px;
+            left: 550px;
+            background-color: rgb(247, 9, 247);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h3>Amount</h3>
+        <input type="text" placeholder="Nhap so tien">
+
+    </div>
+
+    <div>
+        <h3>From Currency</h3>
+        <select id="fromMoney" name="fromMoney">
+            <option value="Viet Nam">Viet Nam</option>
+            <option value="USD">USD</option>
+        </select>
+    </div>
+
+    <div>
+        <h3>To Currency</h3>
+        <select id="toMoney" name="toMoney">
+            <option value="USD">USD</option>
+            <option value="Viet Nam">Viet Nam</option>
+        </select>
+    </div>
+
+    <button type="button" onclick="changeMoney()">Convert</button>
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
