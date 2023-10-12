@@ -14,20 +14,21 @@ function changeMoney() {
         switch (a) {
             case "Viet Nam":
                 if (b == 'USD') {
-                    money = money / 23000;
-                    document.write(money.toFixed(3) + " USD")
+                    money = money / 24440;
+                    document.querySelector('.output').textContent = money.toFixed(3) + " USD";
                 } else {
-                    document.write(money + "VND")
+                    document.querySelector('.output').textContent = money + " VND";
                 }
                 break;
             case "USD":
                 if (b == "Viet Nam") {
-                    money = money * 23000;
-                    document.write(money.toFixed(3) + " VND")
+                    money = money * 24440;
+                    document.querySelector('.output').textContent = money.toFixed(3) + " VND";
                 } else {
-                    document.write(money + " USD")
+                    document.querySelector('.output').textContent = money + " USD";
                 }
                 break;
         }
-    }    
+    }
+    
 }
