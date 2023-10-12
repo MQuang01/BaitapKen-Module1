@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    .uname,
+    .password {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .container {
+        width: 250px;
+    }
+
+    .container div {
+        margin-bottom: 5px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="uname">
+            <label for="">Account: </label>
+            <input type="text">
+        </div>
+
+        <div class="password">
+            <label for="">Password: </label>
+            <input type="password">
+        </div>
+
+        <button type="button" onclick="loGin()">Đăng nhập</button>
+    </div>
+
+
+    <script>
+        const nameLogin = 'Admin';
+        const psWord = 'TheMaster';
+
+        function loGin() {
+            let a = document.querySelector(".uname input[type='text']").value;
+            let b = document.querySelector(".password input[type='password']").value;
+
+
+            if (a == '' || a === null) {
+                alert('Nhap username va password !')
+            } else if (a == nameLogin) {
+                if (b == psWord) {
+                    alert('Welcome to my world ^_^ !!')
+                } else if (b == '' || b === null) {
+                    alert('Canceled !')
+                } else {
+                    alert('Wrong password')
+                }
+            } else {
+                alert("I don't know you")
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>
