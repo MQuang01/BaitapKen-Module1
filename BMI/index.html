@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh BMI</title>
+</head>
+<body>
+    
+    <script>
+        let weight = +prompt('Nhap can nang cua ban (don vi KG) :  ', '');
+        let height = +prompt('Nhap chieu cao cua ban (don vi Meters) : ', '');
+        let tinhBMI = (weight / (height * height)).toFixed(2)   
+
+
+        if (weight == '' || height == ''){
+            alert('Nhap du thong tin')
+        }else if (tinhBMI < 18.5) {
+            alert('chi so BMI cua ban la : ' + tinhBMI + ' Under weight')
+        } else if (tinhBMI < 25) {
+            alert('chi so BMI cua ban la : ' + tinhBMI + ' Normal')
+        } else if (tinhBMI < 30) {
+            alert('chi so BMI cua ban la : ' + tinhBMI + ' Overweight')
+        } else {
+            alert('chi so BMI cua ban la : ' + tinhBMI + ' Obese')
+        }
+         
+
+    </script>
+
+</body>
+</html>
