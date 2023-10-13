@@ -21,6 +21,10 @@ function handleBtnClick(btn) {
         document.querySelector(".container input[type='text']").value = txt;
     } else {
         let txt = document.querySelector(".container input[type='text']").value;
+        if (txt == '' && btn == 0) {
+            return;
+        }
+        
         txt += btn;
         document.querySelector(".container input[type='text']").value = txt;
     }
