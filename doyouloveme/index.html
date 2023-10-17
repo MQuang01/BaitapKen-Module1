@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        display: flex;
+        flex-flow: column wrap;
+        min-height: 70vh;
+        justify-content: center;
+        padding-left: 33vw;
+    }
+
+    button {
+        margin: 20px;
+    }
+
+
+</style>
+<body>
+    <div>
+        <Span><h1>Do you love me?</h1></Span>
+    </div>
+    <div>
+        <button id="btnYes" type="button" onclick="canPick()">Yes</button>
+        <button id="btnNo" type="button" onmouseover="cantPick()">No</button>
+    </div>
+    <script>
+        function cantPick() {
+            document.getElementById('btnNo').style.position = "absolute";
+            let top = Math.random() * 300;
+            let left = Math.random() * 300;
+
+            document.getElementById('btnNo').style.top = top + "px";
+            document.getElementById('btnNo').style.left = left + "px";
+        }
+
+        function canPick() {
+            alert('Yes. You are right <3 !')
+        }
+    </script>
+</body>
+</html>
