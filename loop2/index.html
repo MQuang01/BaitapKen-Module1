@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        min-height: 70vh;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    table td{
+        padding: 5px;
+    }
+
+    table td:nth-child(odd){
+        background-color: aqua;
+    }
+
+    table td:nth-child(even){
+        background-color: yellow;
+    }
+</style>
+<body>
+    <table border="1">
+
+    </table>
+
+    <script>
+        let str = ""
+        for(i = 1; i<= 10; i++){
+            str += "<tr>";
+            for(j = 1; j<= 9; j++){
+                str += `<td> ${j} * ${i} = ${i * j} </td>`
+            }
+        }
+        str += "</tr>"
+        document.querySelector("table").innerHTML = str;
+    </script>
+</body>
+</html>
