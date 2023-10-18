@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="ipt" type="text">
+    <button type="button" onclick="getValue()">Add</button>
+    <button type="button" onclick="displayValue()">Display</button>
+    <br><span>==================================</span><br>
+    <div id="alo"></div>
+
+    <script>
+        let array = [];
+        let val = null;
+        function getValue() {
+            val = document.querySelector("input");
+            if (val.value == '') {
+                return;
+            } else {
+                array.push(val.value);
+                console.log(array);
+            }
+            ipt.value = "";
+        }
+
+
+
+        function displayValue() {
+            let i = 0;
+            let str = "";
+            for (const a of array.values()) {
+                str += `<p>Element ${i} = ${a} </p>`;
+                i++;
+            }
+            document.getElementById("alo").innerHTML = str;
+        }
+    </script>
+</body>
+
+</html>

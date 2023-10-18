@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <h3>Caro Game Simple</h3>
+    <p id="carogame"></p>
+
+    <button type="button" onclick="changeValue()">Change Value</button>
+
+
+    <script>
+        let b = document.getElementById('carogame');
+
+        let board = [];
+
+        let str = "";
+
+        for (i = 0 ; i < 5 ; i++){
+            board[i] = new Array(0, 0, 0, 0, 0);
+        }
+
+        for (i = 0; i < 5; i++) {
+            str += "<br/>"
+            for (j = 0; j < 5; j++) {
+                str += board[i][j] + "&nbsp;&nbsp;";
+            }
+        }
+        b.innerHTML = str;
+
+        function changeValue() {
+            let pstX = +prompt("Nhap so hang : ");
+            let pstY = +prompt("Nhap so cot : ");
+            str = "";
+            board[pstX][pstY] = "x"; 
+            // rows[pstX] = rows[pstX].slice(0, pstY) + "x" + rows[pstX].slice(pstY + 1);
+
+            for (i = 0; i < 5; i++) {
+                str += "<br>"
+                for (j = 0; j < 5; j++) {
+                    str += board[i][j] + "&nbsp;&nbsp;";
+                }
+            }
+            b.innerHTML = str;
+        }
+       
+
+    </script>
+</body>
+
+</html>
