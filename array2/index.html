@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let color1 = "Red";
+        // let color2 = "Green";
+        // let color3 = "White";
+        // let color4 = "Black";
+
+        // let myColor = color1.concat(`, ${color2}, ${color3}, ${color4}`);
+
+        // console.log(myColor);
+
+
+        // let numbers = prompt("Nhap vao 1 so bat ki: ").split("").map(Number);
+
+        // for (i = 0; i < numbers.length - 1; i++) {
+        //     if (numbers[i] % 2 == 0 && numbers[i + 1] % 2 == 0) {
+        //         numbers[i] = numbers[i] + "-";
+        //     }
+
+        // }
+        // let newNumbers = numbers.join("");
+        // console.log(newNumbers)
+
+
+        let str = "The Quick Brown Fox";
+        let newStr = str.split("");
+
+        console.log(newStr);
+        for (i = 0; i < str.length; i++) {
+            if(newStr[i] == newStr[i].toUpperCase()){
+                newStr[i] = newStr[i].toLowerCase();
+            }else {
+                newStr[i] = newStr[i].toUpperCase();
+            }
+        }
+        newStr = newStr.join("");
+        console.log(newStr);
+    </script>
+</body>
+
+</html>

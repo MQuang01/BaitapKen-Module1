@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    form {
+        display: flex;
+        gap: 10px;
+    }
+</style>
+
+<body>
+    <form action="">
+        <div>
+            <label for="">Nhập từ: </label>
+            <input type="text">
+        </div>
+        <div>
+            <button type="button" onclick="transLation()">Dịch</button>
+        </div>
+
+    </form>
+    <div>
+        <p id="answer"></p>
+    </div>
+
+
+    <script>
+        function transLation() {
+            let value = document.querySelector("input").value;
+            let wordViet = ["táo", "chuối", "xe hơi", "vở"];
+            let wordEng = ["apple", "banana", "car", "book", "house"];
+
+            let flag = true;
+
+            wordEng.forEach(function (word) {
+                if (value != word) {
+                    flag = false;
+                }
+            })
+
+            if(flag){
+                let ltnWord = wordEng.indexOf(word);
+                    document.getElementById("answer").innerHTML = wordViet[ltnWord];
+            }else {
+                document.getElementById("answer").innerHTML = "No found";
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>
