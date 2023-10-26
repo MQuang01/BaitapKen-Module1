@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        display: flex;
+        min-height: 70vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        display: flex;
+        flex-flow: column wrap;
+        position: relative;
+        width: 200px;
+        gap: 40px;
+    }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 15px;
+    }
+
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: grey;
+        -webkit-transition: .4s;
+        transition: .4s;
+        border-radius: 34px;
+    }
+
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        top: -5px;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+        border-radius: 50%;
+        box-shadow: 0 0 2px black;
+    }
+
+    input:checked+ .s1 {
+        background-color: #2196F3;
+    }
+    input:checked+ .s2 {
+        background-color: #089630;
+    }
+    input:checked+ .s3 {
+        background-color: #f63f23;
+    }
+
+    input:checked+.slider:before {
+        -webkit-transform: translateX(35px);
+        /* -ms-transform: translateX(30px);
+        transform: translateX(35px); */
+    }
+</style>
+
+<body>
+    <div class="container">
+        <label class="switch">
+            <input type="checkbox" onclick="myFunction()">
+            <span class="slider s1"></span>
+        </label>
+        <label class="switch">
+            <input type="checkbox" onclick="myFunction()">
+            <span class="slider s2"></span>
+        </label>
+        <label class="switch">
+            <input type="checkbox" onclick="myFunction()">
+            <span class="slider s3"></span>
+        </label>
+    </div>
+
+    <script>
+        function myFunction() {
+            let checkBox = document.querySelectorAll('input')[0];
+            let checkBox1 = document.querySelectorAll('input')[1];
+            let checkBox2 = document.querySelectorAll('input')[2];
+
+            let flag = true;
+
+            if (checkBox.checked != checkBox1.checked || checkBox.checked != checkBox2.checked){
+                if(checkBox1.checked != checkBox2.checked){
+                    flag = false;
+                }
+            }
+
+            if(flag){
+                
+            }else {
+            }
+        }
+    </script>
+</body>
+
+</html>

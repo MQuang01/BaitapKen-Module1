@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;"></canvas>
+    <script>
+        function Rectang(x, y) {
+            this.x = x;
+            this.y = y;
+
+            this.getSqr = function () {
+                return (this.x + this.y) * 2;
+            }
+
+            this.getPer = function () {
+                return this.x * this.y;
+            }
+        }
+        let rectang = new Rectang(100, 50);
+        function createRect() {
+            let ctx = document.getElementById("myCanvas").getContext("2d");
+            
+            ctx.beginPath();
+            // ctx.fillRect(rectang.x, rectang.x, rectang.y, rectang.y);
+            ctx.fillStyle = 'red';
+            ctx.fillRect((Math.random() * innerHeight), (Math.random() * innerWidth), rectang.x, rectang.y);
+            ctx.fill();
+        }
+
+        createRect();
+
+        let sqr = rectang.getSqr();
+        let per = rectang.getPer();
+        console.log(`${sqr} va ${per}`);
+        
+    </script>
+</body>
+
+</html>

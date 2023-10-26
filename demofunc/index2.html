@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Temperature Converter</h3>
+    <div>
+        <p>Type a value in the Fahrenheit field to convert the value to Celcius: </p>
+    </div>
+    <div>
+        Fahrenheit <input type="number" id="input" oninput="valueF(this.value)"></input>
+    </div>
+    <div>
+        <p>Celius: <span id="result"></span></p>
+    </div>
+
+    <script>
+        function valueF(valNum){
+            valNum = parseFloat(valNum);
+            document.getElementById("result").innerHTML = ((valNum - 32) / 18).toFixed(3);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*==========FINDINDEX==========*/
+        /*=============Đối tượng trong mảng dựa trên giá trị================*/
+        const numbers = [1, 2, 3, 4, 5];
+        const target = 60;
+
+        const index = numbers.findIndex( element => element === target)
+        console.log(`Nằm ở vị trí thứ: ${index}`);
+
+        // function myFindIndex(arr, target){
+        //     for(let i = 0; i < arr.length; i++){
+        //         if (arr[i] === target){
+        //             return i;
+        //         }
+        //     }
+        //     return -1;
+        // }
+
+
+        /*=============Đối tượng trong mảng dựa trên một thuộc tính================*/
+        // const products = [
+        //     { id: 1, name: 'Product 1' },
+        //     { id: 2, name: 'Product 2' },
+        //     { id: 3, name: 'Product 3' }
+        // ];
+        // const targetId = 2;
+
+        // const index = products.findIndex(product => product.id === targetId);
+        // console.log(`Nằm ở vị trí thứ: ${index}`); // Kết quả: 1
+
+
+        /*=============Điều kiện================*/
+        // const numbers = [1, 2, 3, 4, 5];
+
+        // const index = numbers.findIndex(element => element > 3);
+        // console.log(`Nằm ở vị trí thứ: ${index}`); // Kết quả: 3
+    </script>
+</body>
+
+</html>

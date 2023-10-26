@@ -1,0 +1,304 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    display: inline-grid;
+    grid-template-columns: 240px auto;
+    grid-gap: 10px 30px;
+    width: 100%;
+    height: auto;
+}
+
+.header {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+
+.header-left {
+    width: auto;
+    display: flex;
+    padding-top: 5px;
+}
+
+.btn-bars {
+    padding: 8px;
+}
+
+.btn-bars button{
+    background-color: transparent;
+    border: 0;
+    font-size: 18px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.btn-bars button:hover{
+    background-color: gray;
+    border: 0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.btn-logo #logo {
+    position: relative;
+    width: 120px;
+    height: 56px;
+    background-color: transparent;
+    border: 0;
+}
+
+.btn-logo #logo span{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+}
+
+.btn-logo #logo img{
+    width: 120px;
+    height: 50px;
+}
+
+.btn-logo #logo img:hover {
+    cursor: pointer;
+}
+
+.header-mid {
+    display: flex;
+    padding: 15px;
+}
+
+.form-search {
+    position: relative;
+}
+
+.form-search i {
+    position: absolute;
+}
+
+.form-search .fa-magnifying-glass {
+    left: 20px;
+    top: 13px
+}
+
+.form-search .fa-keyboard {
+    top: 13px;
+    right: 10px;
+}
+
+.header-mid input {
+    width: 30vw;
+    height: 92%;
+    padding-left: 50px;
+    border-radius: 40px 0 0 40px;
+}
+
+.header-mid #btn-search {
+    width: 64px;
+    height: 40px;
+    border-radius: 0 40px 40px 0;
+    border-left: 0;
+}
+
+.header-mid #btn-search:hover {
+    background-color: rgb(222, 222, 222);
+    width: 64px;
+    height: 40px;
+    border-radius: 0 40px 40px 0;
+    border-left: 0;
+    cursor: pointer;
+}
+
+.header-mid #search-voice {
+    margin: 0px 10px;
+    border: 0;
+    border-radius: 50%;
+    width: 40px;
+}
+
+.header-mid #search-voice:hover {
+    background-color: gray;
+    margin: 0px 10px;
+    border: 0;
+    border-radius: 50%;
+    width: 40px;
+    cursor: pointer;
+}
+
+.header-right {
+    padding: 15px;
+    height: 40px;
+    display: flex;
+}
+
+.header-right button {
+    background-color: transparent;
+    margin: 0px 5px;
+    border: 0;
+    border-radius: 50%;
+    width: 40px;
+    height: 100%;
+}
+
+.header-right #account img{
+    border-radius: 50%;
+    width: 40px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.header-right button:hover {
+    background-color: gray;
+    margin: 0px 5px;
+    border: 0;
+    border-radius: 50%;
+    width: 40px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.table-noti {
+    position: relative;
+}
+
+#list-noti {
+    list-style: none;
+    background-color: white;
+    max-width: 480px;
+    min-width: 300px;
+    max-height: 397px;
+    position: absolute;
+    right: 0;
+    box-shadow: 0px 0px 17px 2px #888888;
+    border-radius: 12px;
+    display: none;
+}
+
+.table-noti:hover #list-noti {
+    display: block;
+}
+
+#list-noti .sting-noti {
+    display: flex;
+    width: auto;
+    height: 30px;
+    font-size: 20px;
+    padding: 5px 10px 2px;
+    border-bottom: 1px solid black;
+    justify-content: space-between;
+}
+
+.sting-noti h5 {
+    flex: 1;
+    align-self: center;
+}
+
+.sting-noti button {
+    background-color: transparent;
+    border: 0;
+    border-radius: 50%;
+    width: 30px;
+    height: auto;
+}
+
+.sting-noti button:hover {
+
+    background-color: rgb(231,231,231);
+    border: 0;
+    border-radius: 50%;
+    width: 30px;
+    height: auto;
+}
+
+#list-noti li a {
+    color: black;
+    display: block;
+    padding: 10px 15px;
+    width: 100%;
+}
+
+.option {
+    width: 240px;
+    grid-row-start: span 2;
+    padding-left: 10px;
+}
+
+.homepage-option {
+    display: flex;
+    flex-direction: column;
+}
+
+.homepage-option button {
+    position: relative;
+    padding-left: 40px;
+    text-align: left;
+    width: 180px;
+    height: 30px;
+    border-radius: 10px;
+    border: 0;
+    background-color: transparent;
+}
+
+.homepage-option button i {
+    position: absolute;
+    left: 15px;
+}
+
+.homepage-option button:hover {
+    padding-left: 40px;
+    text-align: left;
+    width: 180px;
+    height: 30px;
+    border-radius: 10px;
+    border: 0;
+    background-color: rgb(231,231,231);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main {
+    width: 100%;
+}

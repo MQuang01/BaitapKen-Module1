@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let Circle = function(radius){
+            this.radius = radius;
+
+            this.getRadius = function () {
+                return radius;
+            }
+
+            this.getArea = function () {
+                return this.area = Math.PI * radius * radius;
+            }
+
+        }
+
+        let circle = new Circle(2)
+        radius = circle.getRadius();
+        area = circle.getArea();
+        console.log(radius + " va " + area);
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        function proConfirm(answer){
+            let result = "";
+            if (answer){
+                result = "Excellent. We'll play a nice game of chess.";
+                alert(result)
+            } else {
+                result = "Maybe later then.";
+                alert(result)
+            }
+            return answer;
+        }
+        let confirmAnswer = confirm("Shall we play a game?");
+        let theAnswer = proConfirm(confirmAnswer);
+        alert(theAnswer);
+
+    </script>
+</body>
+</html>

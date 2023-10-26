@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function isPrime(number) {
+            
+
+            if (number == " "){
+                alert("Yêu cầu nhập vào 1 số bất kì");
+                return;
+            }
+            if (number == 1){
+                alert("Vì ước chung lớn nhất là chính nó, nên 1 không phải là số nguyên tố");
+                return;
+            }
+            if (number == 2 || number == 3) {
+                alert(number + " là số nguyên tố");
+                return;
+            }
+            
+            if (number % 2 == 0 || number % 3 == 0) {
+                alert(`${value} không phải số nguyên tố`)
+            }else {
+                alert(`${value} là số nguyên tố`);
+            }
+        }
+
+        let value = prompt("Nhập số từ 0-10000 để kiểm tra:");
+        isPrime(value);
+
+
+    </script>
+</body>
+
+</html>

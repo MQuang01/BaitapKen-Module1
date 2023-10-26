@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+
+    </table>
+
+    <script>
+        let str = "";
+        let str1 = "";
+        for(let i = 0 ; i < 5 ; i++){
+            str += "<tr>"
+            for(let j = 0; j < 5; j++){
+                if (j<=i){
+                    str += `<td> * </td>`
+                }
+            }
+            str += "</tr>"
+        }
+        let col = 5;
+        for (let i = 0; i < 5; i++) {
+            str1 += "<tr>"
+            for (j = 0; j < col; j++) {
+
+                str1 += `<td> * </td>`
+
+            }
+            str1 += "</tr>"
+            col--;
+        }
+        document.querySelector('table').innerHTML = str + str1;
+        // let col = 5;
+        // for (let i = 0; i < 5; i++) {
+        //     str += "<tr>";
+        //         for (j = 1; j < 6; j++){
+        //             if(j>=col){
+        //                 str += `<td> * </td>`
+        //             }else {
+        //                 str += `<td></td>`
+        //             }
+        //         }
+        //     str += "</tr>";
+        //     col--;
+        // }
+        // document.querySelector('table').innerHTML = str;
+    </script>
+</body>
+
+</html>

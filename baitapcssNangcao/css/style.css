@@ -1,0 +1,277 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(0, 25, 148, 0.826);
+}
+
+.container {
+    display: flex;
+    padding: 5px 20px;
+}
+
+.form-left {
+    width: 60%;
+    margin-right: 10px;
+}
+
+.top-form {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.btn {
+    width: auto;
+    height: auto;
+    margin-right: 20px;
+}
+
+.top-form .btn i {
+    padding-right: 10px;
+}
+
+.btn button {
+    color: #fff;
+    width: 120px;
+    height: 100%;
+    background-color: rgba(0, 25, 148, 0.826);
+    border: 0;
+    border-radius: 16px 16px 0 0;
+}
+
+.btn button:hover{
+    color: blue;
+    width: 120px;
+    height: 100%;
+    background-color: #fff;
+    border: 0;
+    border-radius: 16px 16px 0 0;
+    cursor: pointer;
+}
+
+.search-form {
+    flex-grow: 1;
+    padding: 5px 0;
+    position: relative;
+}
+
+.search-form i {
+    top: 10px;
+    color: #fff;
+    position: absolute;
+}
+
+.search-form input{
+    width: calc(100% - 40px);
+    height: 30px;
+    padding-left: 20px;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid rgb(191, 190, 190);
+}
+
+.search-form input::placeholder {
+    color: rgb(191, 190, 190);
+}
+
+.emote {
+    width: auto;
+    height: auto;
+    padding-right: 20px;
+}
+
+.emote button {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 50%;
+    height: 38px;
+    width: 38px;
+    font-size: medium;
+}
+
+.emote button:hover {
+    background-color: white;
+    border: none;
+    color: black;
+    border-radius: 50%;
+    height: 38px;
+    width: 38px;
+    font-size: medium;
+    cursor: pointer;
+}
+
+.menu-form {
+    background-color: #fff;
+    width: 100%;
+    height: calc(100vh - 100px);
+    border: 0;
+    border-radius: 20px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.option-menu {
+    margin-bottom: 40px;
+    
+}
+
+.option-menu button {
+    background-color: transparent;
+    border: 0;
+    padding: 10px;
+    border-radius: 30px;
+    color: gray;
+}
+
+.option-menu button:hover {
+    background-color: blue;
+    border: 0;
+    padding: 10px;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.product-container {
+    display: flex;
+    gap: 10px;
+    padding: 0 10px 20px 10px;
+    max-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product {
+    text-align: center;
+    width: calc((100% - 80px) / 5);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    border: 1px solid rgb(231,231,231);
+}
+
+.product:hover{
+    cursor: pointer;
+    opacity: 0.3;
+}
+
+.product div {
+    position: relative;
+    padding: 0 20px;
+}
+
+.product img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.product span {
+    position: absolute;
+    bottom: 4px;
+    left: calc((100% - 60px)/2);
+    width: 60px;
+    height: auto;
+    color: blue;
+    background-color: #fff;
+    opacity: 0.7;
+    border-radius: 10px 10px 0 0;
+    padding: 3px;
+}
+
+.product h5 {
+    background-color: rgb(231,231,231);
+    height: 40px;
+    border-radius: 0 0 15px 15px;
+}
+
+
+.form-right {
+    width: 40%;
+    margin-left:  20px;
+}
+
+.top-form-bill {
+    width: 100%;
+    height: 40.8px;
+    display: flex;
+    flex-flow: row wrap;    
+    justify-content: space-between;
+    padding-left: 10px;
+}
+
+.top-form-bill .btn {
+    display: flex;
+    width: auto;
+    height: auto;
+}
+
+.top-form-bill .btn button {
+    width: 60px;
+    margin: 0 5px;
+    background-color: transparent;
+}
+
+.top-form-bill .btn button:hover {
+    color: black;
+    width: 60px;
+    height: 100%;
+    background-color: #fff;
+    border: 0;
+    border-radius: 16px 16px 0 0;
+    cursor: pointer;
+    font-weight: 300;
+}
+
+.top-form-bill .btn #add {
+    padding: 0;
+    width: 38px;
+    height: 38px;
+    background-color: blue;
+    border-radius: 50%;
+    font-size: medium;
+}
+
+.top-form-bill .btn #add:hover {
+    background-color: white;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    font-size: medium;
+    color: black;
+    border: 0;
+}
+
+.bill-form {
+    background-color: #fff;
+    width: 100%;
+    height: calc(100vh - 100px);
+    border: 0;
+    border-radius: 15px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+
+.top-form-bill .emote {
+    align-items: center;
+}
+
+.top-form-bill .emote button{
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    font-size: medium;
+}

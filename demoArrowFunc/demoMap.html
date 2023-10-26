@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*==========MAP==========*/
+        /*=============Xử lý vào từng phần tử của mảng================*/
+        const numbers = [1, 2, 3, 4, 5];
+        const numbers1 = [5, 5];
+
+
+        const doubledNumbers = numbers.map((number, index) => number * index)
+        console.log("New Array : " + doubledNumbers); // Kết quả: [2, 4, 6, 8, 10]
+
+
+        
+        // function myMap(arr){
+        //     let results = []
+        //     for (let i = 0; i < arr.length; i++){
+        //         results.push(arr[i] * i)
+        //     }
+        //     return results;
+        // }
+        
+
+        
+        // console.log(myMap(numbers));
+        // console.log(myMap(numbers1));
+
+        /*=============Trích xuất thuộc tính từ mỗi đối tượng================*/
+        // const products = [
+        //     { id: 1, name: 'Product 1' },
+        //     { id: 2, name: 'Product 2' },
+        //     { id: 3, name: 'Product 3' }
+        // ];
+
+        // const productNames = products.map(product => product.name);
+        // console.log(productNames); // Kết quả: ['Product 1', 'Product 2', 'Product 3']
+
+
+        /*=============Định dạng lại chuỗi================*/
+        // const names = ['John', 'Jane', 'Michael'];
+        // console.log(names)
+
+        // const formattedNames = names.map(name => `Name: ${name}`);
+        // console.log(formattedNames); // Kết quả: ['Name: John', 'Name: Jane', 'Name: Michael']
+    </script>
+</body>
+
+</html>
