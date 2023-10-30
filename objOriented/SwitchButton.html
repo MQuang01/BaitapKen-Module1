@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class EletricLamp {
+            constructor() {
+                this.status = false;
+            }
+
+            turnOn(){
+                return this.status = true;
+            }
+
+            turnOff(){
+                return this.status = false;
+            }
+        }
+        let lamp = new EletricLamp();
+        // console.log(lamp);
+
+        class SwitchButton {
+            constructor(){
+                this.lamp = null;
+            }
+
+            getLamp(){
+                return this.lamp;
+            }
+
+            setLamp(lamp){
+                this.lamp = lamp;
+            }
+
+            connectLamp(EletricLamp){
+                return this.lamp = EletricLamp;
+            }
+
+            switchOn(EletricLamp){
+                if(this.lamp == null){
+                    throw new Error("Switch not connect to EletricLamp")
+                }
+                EletricLamp.turnOn();
+                console.log("Light On");
+            }
+            switchOff(EletricLamp){
+                if(this.lamp == null){
+                    throw new Error("Switch not connect to EletricLamp")
+                }
+                EletricLamp.turnOff();
+                console.log("Light Off");
+            }
+        }
+        let sw = new SwitchButton();
+
+        sw.connectLamp(lamp);
+        console.log(sw.getLamp());
+
+        sw.switchOn(lamp);
+        console.log(lamp);
+        sw.switchOff(lamp);
+        console.log(lamp);
+        sw.switchOn(lamp);
+        sw.switchOff(lamp);
+        sw.switchOn(lamp);
+        sw.switchOff(lamp);
+        sw.switchOn(lamp);
+        sw.switchOff(lamp);
+        sw.switchOn(lamp);
+        sw.switchOff(lamp);
+
+        
+    </script>
+</body>
+</html>

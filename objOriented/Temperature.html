@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <p id="resultK"></p>
+    <p id="resultF"></p>
+    <script>
+        let Temperature = function (valueC) {
+            this.valueC = valueC;
+
+            this.getResultK = function () {
+                return this.valueC + 273.15;
+            }
+
+            this.getResultF = function () {
+                return (this.valueC * 9 / 5) + 32;
+            }
+        }
+
+
+        let tempera = new Temperature(25);
+        let resultK = tempera.getResultK();
+        let resultF = tempera.getResultF();
+        document.getElementById("resultK").innerHTML = `Nhiệt độ K : ${resultK}`;
+        document.getElementById("resultF").innerHTML = `Nhiệt độ F : ${resultF}`;
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="formCreate">
+        <span>
+          <label>Product Name: </label>
+          <input name="txtName" type="text" placeholder="Enter Product Name" />
+        </span>
+        <span>
+          <label>Quantity: </label>
+          <input
+            name="txtQuantity"
+            type="number"
+            placeholder="Enter Quantity"
+          />
+        </span>
+        <span>
+          <label>Price: </label>
+          <input name="txtPrice" type="number" placeholder="Enter Price" />
+        </span>
+        <span>
+          <label>Category </label>
+          <select name="sCategory">
+            <option value="1">Gia cầm</option>
+            <option value="2">Gia súc</option>
+          </select>
+        </span>
+        <span>
+          <label></label>
+          <button id="btnAdd" type="button" onclick="handleBtnAdd()">
+            Add
+          </button>
+        </span>
+      </div>
+      <div id="main">
+        <table border="1">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Product name</th>
+              <th>Category</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>Amount</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="tbodyMain">
+            
+          </tbody>
+        </table>
+      </div>
+      <div id="menupage"></div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

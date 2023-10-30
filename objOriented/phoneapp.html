@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Mobile {
+            constructor(pin, status) {
+                this.pin = pin;         // number: integer
+                this.saveMessTyping = "";   // string
+                this.saveMessInbox = [];     // []
+                this.saveMessSent = [];       // []
+                this.status = status;                   // boolean
+            }
+
+            // bật tắt điện thoại
+            getStatus() {
+                return this.status;
+            }
+            setStatus(status) {
+                this.status = status;
+            }
+            //kiểm tra tình trạng để thực hiện phương thức
+            use() {
+                if (this.getStatus() == "on") {
+                    return true;
+                } else {
+                    console.log("Mobile is off");
+                    return false;
+                }
+            }
+
+            // sạc điện thoại
+            setCharing() {
+                if (this.use()) {
+                    if(this.pin < 100){
+                        this.pin++;
+                    }else {
+                        console.log("Battery Enough");
+                    }
+                }
+            }
+            getCharing() {
+                return this.pin;
+            }
+
+            // soạn tin nhắn
+            setMessTyping(saveMessTyping) {
+                if (this.use()) {
+                    this.saveMessTyping = saveMessTyping;
+                    this.updatePin();
+                }
+            }
+            getMessTyping() {
+                return this.saveMessTyping;
+            }
+
+            // xem hộp thư đến
+            getMessInbox() {
+                return this.saveMessInbox;
+            }
+            // set hộp thư đến
+            setMessInbox(message) {
+                this.saveMessInbox = message;
+            }
+
+            //gửi tin nhắn từ this -> anotherphone
+            sendMessInbox(phone, meSsage) {
+                if (this.use()) {
+                    phone.saveMessInbox.push(meSsage);
+                    this.setMessSent(meSsage);
+                }
+            }
+
+            //xem hộp thư đã gửi
+            getMessSent() {
+                return this.saveMessSent;
+            }
+            //set hộp tin nhắn đã gửi
+            setMessSent(MessSent) {
+                this.saveMessSent.push(MessSent);
+                this.updatePin();
+            }
+
+            updatePin() {
+                if(this.pin > 0){
+                    this.pin--;
+                }
+            }
+
+            toString() {
+                console.log(`pin: ${this.pin} | MessTyping: ${this.saveMessTyping} | MessInbox: ${this.saveMessInbox} | MessSent: ${this.saveMessSent} | Status: ${this.status}`);
+            }
+
+            // async increasePin() {
+            //     await new Promise(() => {
+            //         const myInterval = setInterval(() => {
+            //             nokia.setCharing();
+            //             console.log(nokia.pin);
+            //         }, 3000);
+            //     });
+            //     // if (nokia.pin = 100) {
+            //     //     clearInterval(myInterval);
+
+            //     //     console.log("DU PIN");
+            //     // }
+            // }
+        }
+
+        let nokia = new Mobile(100, "off");
+        let iphone = new Mobile(50, "on")
+        nokia.toString();
+        iphone.toString();
+
+        //Khi dien thoai off
+        nokia.setMessTyping("...");
+        nokia.toString();
+
+        //Khi dien thoai on
+        nokia.setStatus("on")
+        nokia.sendMessInbox(iphone, "message from nokia");
+        iphone.sendMessInbox(nokia, "message from iphone");
+        nokia.toString();
+        iphone.toString();
+        
+        nokia.setMessSent("hi");
+        console.log(iphone.getMessInbox());
+        nokia.toString();
+        nokia.setCharing();
+        nokia.toString();
+        nokia.setCharing();
+        nokia.toString();
+        nokia.setCharing();
+        // let a = nokia.getMessSent();
+        // console.log(a);
+        // nokia.toString();
+
+        // async function runChar() {
+        //     await nokia.increasePin();
+        // }
+
+        // runChar();
+        // async function decreaseBattery(){
+        //     // await new Promise((resolve) => setTimeout(resolve, 10000));
+        //     await new Promise((resolve) => {
+        //         const myInterval = setInterval(()=>{
+        //                 console.log("LOOP", nokia.pin);
+        //             nokia.updatePin();
+        //             if(nokia.pin < 0){
+        //                 clearInterval(myInterval);
+
+        //                 console.log("HET PIN");
+        //                 nokia.toString();
+        //                 iphone.toString();
+        //             }
+        //         }, 50)
+        //     });
+        // }
+        // decreaseBattery();
+
+    </script>
+</body>
+
+</html>

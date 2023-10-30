@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+
+.container {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    min-height: 70vh;
+    border-radius: 10px;
+}
+
+.container div {
+    background-color: rgb(229, 229, 229);
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.formCreate {
+    
+    padding: 10px;
+}
+.formCreate span {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.formCreate label {
+    width: 100px;
+}
+
+.formCreate input {
+    flex-grow: 1;
+    padding: 3px;
+    border-radius: 4px;
+    border: solid 1px;
+}
+
+#btnAdd {
+    width: 50px;
+    height: auto;
+    padding: 5px;
+    background-color: rgb(19, 115, 249);
+    border: 0;
+    border-radius: 5px;
+    color: white;
+}
+
+#btnAdd:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+#main {
+    padding: 5px;
+}
+
+#main table{
+    
+    border-collapse: collapse;
+    width: 100%;
+}
+#main table thead {
+    text-align: center;
+    color: white;
+    background-color: black;
+    
+}
+
+#main table thead th {
+    padding: 4px;
+}
+
+#main tbody td {
+    padding: 6px 4px;
+    
+    border: 1px dashed black;
+}
+
+#main tbody tr #btn-act{
+    text-align: center;
+}
+
+.btn {
+    padding: 4px 15px;
+    border-radius: 3px;
+    color: white;
+    border: 0;
+}
+
+.btn:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.btn-edit {
+    background-color: rgb(198, 198, 0);
+    
+}
+
+.btn-update {
+    background-color: blue;
+}
+
+.btn-cancle {
+    background-color: rgb(198, 198, 0);
+}
+
+.btn-remove {
+    background-color: red;
+}
+
+.tb-foot {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.tb-foot-total {
+    text-align: end;
+}
+
+.item {
+    width: 130px;
+    font-weight: bold;
+}
+
+.text-right {
+    text-align: end;
+}

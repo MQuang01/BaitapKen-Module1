@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Apple {
+            constructor(weight = 10) {
+                if(weight != 10 ) {
+                    throw new Error("Apple has default weight is 10!")
+                }
+                this.w = weight;
+            }
+            
+            getWeight(){
+                return this.w;
+            }
+
+            getInforApple(apple){
+                console.log(`Khối lượng của nó là ${apple.w}`);
+            }
+        }
+
+        let apple1 = new Apple();
+        let apple2 = new Apple();
+        console.log(`Khối lượng Apple là ${apple1.getWeight()}`);
+        apple2.getInforApple(apple1);
+
+        class Human {
+            constructor(name, hWeight){
+                this.name = name;
+                this.gender = true;
+                this.hWeight = hWeight;              
+            }
+            toTalk(){
+                console.log(`Tôi tên ${this.name} giới tính ${this.getGender()} nặng ${this.hWeight} kg`);
+            }
+
+            setGender(gender){
+                this.gender = gender
+            }
+            getGender(){
+                return this.gender ? "Nam" : "Nữ";
+            }
+
+            getHWeight(){
+                return this.hWeight;
+            }
+
+            getInfor(anotherHuman){
+                console.log(`Cân nặng và giới tính của ${anotherHuman.name} là ${anotherHuman.hWeight} kg, ${anotherHuman.getGender()}`);
+            }
+
+            eatApple(apple){
+                if(apple.getWeight() > 0){
+                    this.hWeight++;
+                    apple.w--;
+                    console.log("Tôi vừa ăn Apple");
+                }else {
+                    console.log("Clean");
+                }
+            }
+            
+            getAppleWeight(apple){
+                console.log(`Khối lượng hiện tại của Apple là ${apple.w}`);
+            }
+        }
+
+        let human1 = new Human("Quang", 50);
+        let human2 = new Human("B", 100)
+
+        // human.setGender(false);
+        human1.toTalk();
+        human2.getInfor(human1);
+        human1.eatApple(apple1);
+        console.log(`Cân nặng của tôi bây giờ là : ${human1.getHWeight()}`);
+        human1.getAppleWeight(apple1);
+        human2.getInfor(human1);
+    </script>
+</body>
+</html>

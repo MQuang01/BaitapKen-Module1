@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <title>Kanban</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="header-left">
+          <a href="main-menu.html"><i class="fa-solid fa-house"></i></a>
+          <a href="dashboard.html">CodeGym Ken</a>
+          <a href="template.html">Templates</a>
+        </div>
+        <div class="header-right">
+          <div class="icon-prof" onclick="handleClickProf()">
+            <button type="button">
+              <i
+                class="fa-regular fa-user"
+                id="iProfile"
+                onclick="handleClickProf()"
+              ></i>
+            </button>
+          </div>
+          <div class="profile-option">
+            <ul>
+              <li><a href="">Profile</a></li>
+              <li><a href="login.html">Log out</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="task-title">
+        <div class="title-left">
+          <label for="">[BC-JAVA-2023] Bootcamp Preparation</label>
+          <a href="">Chart</a>
+        </div>
+        <div class="title-right">
+          <button type="button" onclick="handleClickSet()">
+            <i class="fa-solid fa-gear"></i>
+          </button>
+          <ul class="setting">
+            <li><a href="">Settings</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="main-menu">
+        <div class="task-holder">
+          <div class="weekend-1">
+            <label for=""><i class="fa-solid fa-chevron-up"></i></label>
+            <button
+              style="font-weight: bold"
+              type="button"
+              onclick="handleClickTaskWeek('w1')"
+            >
+              Week 1
+            </button>
+          </div>
+          <div class="table-list" id="board-w1">
+            <div class="table" data-board="backlog">
+              <h6>Backlog</h6>
+              <div class="list-item">
+                <button type="button" class="ui-state-default">A</button>
+                <button type="button" class="ui-state-default">
+                  [Thực hành] Khai báo và sử dụng biến
+                </button>
+                <button type="button" class="ui-state-default">C</button>
+                <button type="button">A</button>
+                <button type="button">
+                  [Thực hành] Khai báo và sử dụng biến
+                </button>
+                <button type="button">C</button>
+                <button type="button">A</button>
+              </div>
+              <div class="add-card">
+                <button type="button">Add a card</button>
+              </div>
+              <div class="create-task">
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Enter to add a new task"
+                ></textarea>
+                <button type="button">Create Task</button>
+              </div>
+            </div>
+            <div class="table" data-board="today">
+              <h6>Today</h6>
+              <div class="list-item">
+                <button type="button" class="ui-state-default">A</button>
+                <button type="button" class="ui-state-default">
+                  [Thực hành] Khai báo và sử dụng biến
+                </button>
+                <button type="button" class="ui-state-default">C</button>
+                <button type="button">A</button>
+                <button type="button">
+                  [Thực hành] Khai báo và sử dụng biến
+                </button>
+                <button type="button">C</button>
+                <button type="button">A</button>
+              </div>
+              <div class="add-card">
+                <button type="button">Add a card</button>
+              </div>
+              <div class="create-task">
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Enter to add a new task"
+                ></textarea>
+                <button type="button">Create Task</button>
+              </div>
+            </div>
+            <div class="table" data-board="doing">
+              <h6>Doing</h6>
+
+              <div class="add-card">
+                <button type="button">Add a card</button>
+              </div>
+              <div class="create-task">
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Enter to add a new task"
+                ></textarea>
+                <button type="button">Create Task</button>
+              </div>
+            </div>
+            <div class="table">
+              <h6>Reviewing</h6>
+
+              <div class="add-card">
+                <button type="button">Add a card</button>
+              </div>
+              <div class="create-task">
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Enter to add a new task"
+                ></textarea>
+                <button type="button">Create Task</button>
+              </div>
+            </div>
+            <div class="table">
+              <h6>Done</h6>
+
+              <div class="add-card">
+                <button type="button">Add a card</button>
+              </div>
+              <div class="create-task">
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Enter to add a new task"
+                ></textarea>
+                <button type="button">Create Task</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="task-holder" >
+          <div class="weekend-2">
+            <label for=""><i class="fa-solid fa-chevron-up"></i></label>
+            <button
+              style="font-weight: bold"
+              type="button"
+              onclick="handleClickTaskWeek('w2')"
+            >
+              Week 2
+            </button>
+          </div>
+          <div class="table-list" id="board-w2">
+            <div class="table" data-board="backlog">
+              <h6>Backlog</h6>
+              <div class="list-item">
+                <button type="button" class="ui-state-default">A</button>
+                <button type="button" class="ui-state-default">
+                  [Bài giảng] Khai báo và sử dụng biến
+                </button>
+                <button type="button" class="ui-state-default">C</button>
+                <button type="button">A</button>
+                <button type="button">
+                  [Thực hành] Khai báo và sử dụng biến
+                </button>
+                <button type="button">C</button>
+                <button type="button">A</button>
+              </div>
+              <div class="add-card">
+                <button type="button">Add a card</button>
+              </div>
+              <div class="create-task">
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Enter to add a new task"
+                ></textarea>
+                <button type="button">Create Task</button>
+              </div>
+            </div>
+            <div class="table" data-board="today">
+              <h6>Today</h6>
+              <div class="list-item">
+                <button type="button" class="ui-state-default">A</button>
+                <button type="button" class="ui-state-default">
+                  [Thực hành] Khai báo và sử dụng biến
+                </button>
+                <button type="button" class="ui-state-default">C</button>
+                <button type="button">A</button>
+                <button type="button">
+                  [Thực hành] Khai báo và sử dụng biến
+                </button>
+                <button type="button">C</button>
+                <button type="button">A</button>
+              </div>
+              <div class="add-card">
+                <button type="button">Add a card</button>
+              </div>
+              <div class="create-task">
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Enter to add a new task"
+                ></textarea>
+                <button type="button">Create Task</button>
+              </div>
+            </div>
+            <div class="table" data-board="doing">
+              <h6>Doing</h6>
+
+              <div class="add-card">
+                <button type="button">Add a card</button>
+              </div>
+              <div class="create-task">
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Enter to add a new task"
+                ></textarea>
+                <button type="button">Create Task</button>
+              </div>
+            </div>
+            <div class="table">
+              <h6>Reviewing</h6>
+
+              <div class="add-card">
+                <button type="button">Add a card</button>
+              </div>
+              <div class="create-task">
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Enter to add a new task"
+                ></textarea>
+                <button type="button">Create Task</button>
+              </div>
+            </div>
+            <div class="table">
+              <h6>Done</h6>
+
+              <div class="add-card">
+                <button type="button">Add a card</button>
+              </div>
+              <div class="create-task">
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Enter to add a new task"
+                ></textarea>
+                <button type="button">Create Task</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/app.js"></script>
+    <script src="../js/main.js"></script>
+
+    <!-- <script>
+      $(function () {
+        $(".list-item").sortable({
+          revert: true,
+        });
+      });
+    </script> -->
+  </body>
+</html>

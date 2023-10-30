@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    table {
+        border-collapse: collapse;
+    }
+    table td{
+        width: 30px;
+        height: 30px;
+    }
+</style>
+<body>
+    <div>
+        <table border="1">
+
+        </table>
+    </div>
+    
+
+    <script>
+        let str = ""
+        for(i = 1; i<= 20; i++){
+            str += "<tr>";
+            for(j = 1; j<= 20; j++){
+                str +="<td></td>"
+            }
+        }
+        str += "</tr>"
+        document.querySelector("table").innerHTML = str;
+    </script>
+</body>
+</html>
