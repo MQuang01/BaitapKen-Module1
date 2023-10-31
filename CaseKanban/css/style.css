@@ -43,12 +43,12 @@ body {
 }
 
 .icon-prof {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   background-color: grey;
   border-radius: 50%;
   text-align: center;
-  line-height: 40px;
+  line-height: 30px;
   position: relative;
   cursor: pointer;
 }
