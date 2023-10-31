@@ -49,7 +49,6 @@ function handleItemClick(id) {
   if (isEditing == false) {
     isEditing = true;
     let account = findAccountById(id);
-    console.log(account);
     let tdName = document.querySelectorAll(`#tr_${id} td`)[1];
     let tdUsername = document.querySelectorAll(`#tr_${id} td`)[2];
     let tdPassword = document.querySelectorAll(`#tr_${id} td`)[3];

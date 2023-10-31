@@ -56,18 +56,18 @@ function initData() {
   if (localStorage.getItem(KEY_CARDS_W1) != null) {
     cardWeek1 = JSON.parse(localStorage.getItem(KEY_CARDS_W1));
   } else {
-    let card1 = new Card(1, "[Thực Hành] CASE TODO LIST");
-    let card2 = new Card(2, "ABC");
-    let card3 = new Card(3, "XYZ");
+    const card1 = new Card(1, "[Thực Hành] CASE TODO LIST");
+    const card2 = new Card(2, "ABC");
+    const card3 = new Card(3, "XYZ");
     cardWeek1 = [card1, card2, card3];
 
     localStorage.setItem("KEY_CARDS_W1", JSON.stringify(cardWeek1));
   }
 
-  if (localStorage.getItem(KEY_ACCOUNTS) != null) {
+  if (localStorage.getItem(KEY_ACCOUNTS) !== null) {
     accounts = JSON.parse(localStorage.getItem(KEY_ACCOUNTS));
   } else {
-    let acc1 = new Account(1, "Admin", "admin", "password");
+    const acc1 = new Account(1, "Admin", "admin", "password");
     accounts = [acc1];
 
     localStorage.setItem("KEY_ACCOUNTS", JSON.stringify(accounts));
